@@ -1,0 +1,47 @@
+body {
+    background: #1a1a1a;
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.candle-container {
+    position: relative;
+    width: 60px;
+    height: 200px;
+}
+
+.candle-body {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 150px;
+    background: linear-gradient(to right, #e3b28c, #d08a5a);
+    border-radius: 5px;
+    box-shadow:
+        inset 2px 0 8px rgba(0, 0, 0, 0.1),
+        0 0 20px rgba(255, 100, 0, 0.1);
+}
+
+.wick {
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 20px;
+    background: linear-gradient(to bottom, #1a1009, #3a2a1f 80%);
+    border-radius: 2px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    z-index: 2;
+}
+
+#canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
